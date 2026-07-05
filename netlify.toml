@@ -1,0 +1,10 @@
+# Netlify の設定。段階0は公開して需要を計測するだけ。
+# サーバー本体は netlify/functions/mcp.mjs のアダプタ経由で /mcp に出す。
+# 上流APIの登録キー(HOJIN_APP_ID / ESTAT_APP_ID)は本番では netlify env:set で注入する
+# (このファイルには書かない・法令ツールは鍵不要なので未設定でも動く)。
+[build]
+  publish = "public"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"

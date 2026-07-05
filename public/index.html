@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Japan Data MCP — law, corporations, statistics as English metadata</title>
+<meta name="description" content="A Model Context Protocol (MCP) server that gives AI agents cross-source access to Japanese law, corporations, and statistics, normalized to English metadata with source attribution.">
+<style>
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.7;max-width:720px;margin:0 auto;padding:48px 22px;color:#1a1a2e;background:#fafafc}
+  h1{font-size:24px;font-weight:600}
+  code{background:#eef;padding:2px 6px;border-radius:5px;font-size:14px}
+  pre{background:#0f1020;color:#e6e6f0;padding:16px;border-radius:10px;overflow-x:auto;font-size:13px}
+  .muted{color:#666;font-size:14px}
+  a{color:#3b3bb3}
+</style>
+</head>
+<body>
+<h1>Japan Data MCP</h1>
+<p>A <a href="https://modelcontextprotocol.io/">Model Context Protocol</a> (MCP) server that gives AI agents cross-source access to Japanese public data — <b>law, corporations, and statistics</b> — normalized to English metadata, with the required source attribution on every response.</p>
+
+<h2>Endpoint</h2>
+<p>MCP over Streamable HTTP (JSON-RPC 2.0):</p>
+<pre>POST /mcp</pre>
+<p class="muted">A plain <code>GET /mcp</code> returns the server info and the list of available tools (useful for liveness checks).</p>
+
+<h2>Tools (Stage 0)</h2>
+<ul>
+  <li><code>search_japanese_law</code> — search Japanese laws and get structured English metadata (no API key required; sourced from e-Gov).</li>
+  <li><code>search_corporation</code> — look up Japanese corporations by name or corporate number.</li>
+  <li><code>search_statistics</code> — search official Japanese statistics (e-Stat).</li>
+</ul>
+
+<p class="muted">Stage 0 is a minimal, free deployment to measure real demand. Every response carries source attribution. This is an independent data-access utility.</p>
+</body>
+</html>

@@ -1,0 +1,15 @@
+# Cloudflare Workers の設定（仕様3節: Workers 1本 + KV）。
+# 段階0は無料で公開して需要を計測するだけなので、KVは利用カウント用に後で足す。
+# 上流の appId は本番では `wrangler secret put` で入れる（このファイルには書かない）。
+name = "japan-data-mcp"
+main = "src/index.js"
+compatibility_date = "2026-06-01"
+
+# 需要計測の段階0では課金の壁を作らない。KVは段階1（キー検証・利用カウント）で有効化する。
+# [[kv_namespaces]]
+# binding = "USAGE"
+# id = "TBD"
+
+# 上流APIの登録キーは秘密として注入する（人間ゲート・一度だけ）:
+#   wrangler secret put HOJIN_APP_ID
+#   wrangler secret put ESTAT_APP_ID

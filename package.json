@@ -1,0 +1,14 @@
+{
+  "name": "japan-data-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Cross-source access to Japanese law, corporations, and statistics as an MCP server, normalized to English metadata (Stage 0).",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node test/local-test.mjs",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "license": "MIT"
+}
