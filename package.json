@@ -10,5 +10,8 @@
     "dev": "wrangler dev",
     "deploy": "wrangler deploy"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@netlify/blobs": "^10.7.9"
+  }
 }
